@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  codescene-debian-tomcat9:
+    build: .
+    environment:
+      - CODESCENE_DB_PATH=/codescene/codescene
+      - CODESCENE_ANALYSIS_RESULTS_ROOT=/codescene/analysis
+      - CODESCENE_CLONED_REPOSITORIES_ROOT=/codescene/repos
+    ports:
+      - 8888:8080
+    volumes:
+      - codescene:/codescene
+
+volumes:
+  codescene:
+

@@ -1,0 +1,4 @@
+<tomcat-users>
+  <role rolename="admin-gui"/>
+  <user username="tomcat" password="s3cret" roles="admin-gui"/>
+</tomcat-users>
